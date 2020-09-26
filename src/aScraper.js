@@ -53,7 +53,7 @@ module.exports = ({ search, until, since, pages }) =>
       },
     });
 
-    let page = pages || 5;
+    let page = pages || 1;
 
     let data = [];
 
