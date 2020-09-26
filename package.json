@@ -1,0 +1,28 @@
+{
+  "name": "twittersentiment",
+  "version": "0.0.0",
+  "description": "Sentiment analyzer for search terms on twitter.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nameer-rizvi/twittersentiment.git"
+  },
+  "keywords": [
+    "twitter",
+    "sentiment",
+    "text",
+    "analysis",
+    "natural",
+    "language",
+    "processing"
+  ],
+  "author": "Nameer Rizvi <https://github.com/nameer-rizvi/>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nameer-rizvi/twittersentiment/issues"
+  },
+  "homepage": "https://github.com/nameer-rizvi/twittersentiment#readme"
+}
