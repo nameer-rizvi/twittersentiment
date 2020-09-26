@@ -4,7 +4,8 @@
   "description": "Sentiment analyzer for search terms on twitter.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/nameer-rizvi/twittersentiment/issues"
   },
-  "homepage": "https://github.com/nameer-rizvi/twittersentiment#readme"
+  "homepage": "https://github.com/nameer-rizvi/twittersentiment#readme",
+  "dependencies": {
+    "jsontxt": "0.0.1",
+    "scrapefrom": "^2.1.2",
+    "word2vec": "^1.1.4"
+  }
 }
