@@ -2,10 +2,10 @@
   "name": "twittersentiment",
   "version": "0.0.0",
   "description": "Sentiment analyzer for search terms on twitter.",
-  "main": "src/index.js",
+  "main": "src/_index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "node src/_index.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,11 @@
   },
   "homepage": "https://github.com/nameer-rizvi/twittersentiment#readme",
   "dependencies": {
+    "@happyaccident/wink-sentiment": "^5.4.3",
     "jsontxt": "0.0.1",
     "scrapefrom": "^2.1.2",
+    "sentiment": "^5.0.2",
+    "simpul": "^0.3.7",
     "word2vec": "^1.1.4"
   }
 }
