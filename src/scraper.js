@@ -1,15 +1,21 @@
 const { time: simpulTime } = require("simpul");
+const chrono = require("chrono-node");
 const scrapefrom = require("scrapefrom");
 
 module.exports = ({ search, until, since, pages }) =>
   new Promise((resolve, reject) => {
     !search && reject(new Error("Missing search term"));
 
-    until = "until:" + simpulTime.formatted(until, "Y-M-D");
+    until =
+      "until:" +
+      simpulTime.formatted(until && chrono.parseDate(until), "Y-M-D");
 
-    const defaultSince = new Date(new Date().setDate(new Date().getDate() - 3));
-
-    since = "since:" + simpulTime.formatted(since || defaultSince, "Y-M-D");
+    since =
+      "since:" +
+      simpulTime.formatted(
+        since ? chrono.parseDate(since) : chrono.parseDate("3 days ago"),
+        "Y-M-D"
+      );
 
     const baseConfig = (nextCursor) => ({
       api: {

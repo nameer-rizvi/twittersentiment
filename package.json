@@ -20,7 +20,7 @@
     "language",
     "processing"
   ],
-  "author": "Nameer Rizvi <https://github.com/nameer-rizvi/>",
+  "author": "Nameer Rizvi (https://github.com/nameer-rizvi)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/nameer-rizvi/twittersentiment/issues"
@@ -28,10 +28,10 @@
   "homepage": "https://github.com/nameer-rizvi/twittersentiment#readme",
   "dependencies": {
     "@happyaccident/wink-sentiment": "^5.4.3",
-    "jsontxt": "0.0.1",
+    "chrono-node": "^2.1.8",
+    "emoji-strip": "^1.0.1",
     "scrapefrom": "^2.1.2",
     "sentiment": "^5.0.2",
-    "simpul": "^0.3.7",
-    "word2vec": "^1.1.4"
+    "simpul": "^0.3.7"
   }
 }
