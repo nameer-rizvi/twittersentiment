@@ -1,5 +1,5 @@
 {
-  "name": "twittersentiment",
+  "name": "twentiment",
   "version": "0.0.0",
   "description": "Sentiment analyzer for search terms on twitter.",
   "main": "src/_index.js",
