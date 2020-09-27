@@ -17,4 +17,22 @@ Input must be an object with any of the following keys (the only required key be
    - [sliwinski](https://www.npmjs.com/package/sentiment)
    - [wink](https://www.npmjs.com/package/@happyaccident/wink-sentiment)
 
-Output will be an object with the list of tweets (sentiments included) under "tweets" and cumulative results under "cumulative".
+The resolved promise output will be an object with the list of tweets (sentiments included) under "tweets" and cumulative results under "cumulative".
+
+## Installation
+
+```
+$ npm i twentiment
+```
+
+## Usage
+
+```javascript
+const twentiment = require("twentiment");
+// or,
+// import twentiment from "twentiment"
+
+twentiment({ search: "twitter" })
+	.then((data) => console.log(data))
+	.catch((err) => console.log(err));
+```
