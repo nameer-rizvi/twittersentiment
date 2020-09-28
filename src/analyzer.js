@@ -1,5 +1,5 @@
 const Sliwinski = require("sentiment");
-const wink = require("@happyaccident/wink-sentiment");
+const wink = require("wink-sentiment");
 const { isArray, isNumber } = require("simpul");
 
 module.exports = ({ preprocessedData, method }) =>
