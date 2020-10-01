@@ -7,8 +7,8 @@ module.exports = ({ search, until, since, pages }) =>
     !search && reject(new Error("Missing search term"));
 
     until =
-      "until:" +
-      simpulTime.formatted(until && chrono.parseDate(until), "Y-M-D");
+      until &&
+      "until:" + simpulTime.formatted(chrono.parseDate(until), "Y-M-D");
 
     since =
       "since:" +
@@ -21,7 +21,7 @@ module.exports = ({ search, until, since, pages }) =>
       api: {
         url: "https://mobile.twitter.com/search?",
         params: {
-          q: [search, "lang:en", until, since].join(" "),
+          q: [search, "lang:en", until, since].filter(Boolean).join(" "),
           s: "typd",
           ...nextCursor,
         },
