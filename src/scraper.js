@@ -11,11 +11,12 @@ module.exports = ({ search, until, since, pages }) =>
       "until:" + simpulTime.formatted(chrono.parseDate(until), "Y-M-D");
 
     since =
+      since &&
       "since:" +
-      simpulTime.formatted(
-        since ? chrono.parseDate(since) : chrono.parseDate("3 days ago"),
-        "Y-M-D"
-      );
+        simpulTime.formatted(
+          since ? chrono.parseDate(since) : chrono.parseDate("3 days ago"),
+          "Y-M-D"
+        );
 
     const baseConfig = (nextCursor) => ({
       api: {
