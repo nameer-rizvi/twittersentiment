@@ -2,7 +2,7 @@ const { time: simpulTime } = require("simpul");
 const chrono = require("chrono-node");
 const scrapefrom = require("scrapefrom");
 
-module.exports = ({ search, until, since, pages }) =>
+module.exports = ({ search, until, since, pages, axios }) =>
   new Promise((resolve, reject) => {
     !search && reject(new Error("Missing search term"));
 
@@ -20,11 +20,13 @@ module.exports = ({ search, until, since, pages }) =>
 
     const baseConfig = (nextCursor) => ({
       api: {
-        url: "https://mobile.twitter.com/search?",
+        url: "https://mobile.twitter.com/search",
+        ...axios,
         params: {
           q: [search, "lang:en", until, since].filter(Boolean).join(" "),
           s: "typd",
           ...nextCursor,
+          ...(axios && axios.params),
         },
       },
     });
