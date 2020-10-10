@@ -9,6 +9,7 @@ Input must be an object with any of the following keys (the only required key be
 3. until: string, date of latest tweets (default: undefined).
 4. pages: number, how many pages of tweets to analyze, with each page consisting of 20 tweets (default: 1).
 5. preprocess: array of strings, each string being a preprocessor to run on each tweet. Preprocessors include:
+   - persistDupes: keep duplicate tweets.
    - mentions: removes mentions from tweet.
    - emojis: removes emojis from tweet.
    - links || linksROne || linksRTwo || linksRThree: removes links from tweet. Each link option is a different regex.

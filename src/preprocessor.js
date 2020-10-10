@@ -41,9 +41,16 @@ module.exports = ({ rawData, preprocess = [] }) =>
           .trim(),
     };
 
+    !preprocess.includes("persistDupes") &&
+      (rawData = rawData.filter(
+        (tweet, index, self) =>
+          index === self.findIndex((_tweet) => _tweet.tweet === tweet.tweet)
+      ));
+
     for (var i = rawData.length - 1; i >= 0; i--) {
       for (var j = preprocess.length - 1; j >= 0; j--) {
-        rawData[i].tweet = preprocessors[preprocess[j]](rawData[i].tweet);
+        preprocessors[preprocess[j]] &&
+          (rawData[i].tweet = preprocessors[preprocess[j]](rawData[i].tweet));
       }
     }
 
